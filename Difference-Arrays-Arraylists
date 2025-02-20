@@ -1,0 +1,47 @@
+import java.util.ArrayList;
+
+public class DifferenceArraysArrayLists {
+    public static void main(String[] args) {
+        // Using an Array
+        int[] numbersArray = new int[5]; // Fixed size of 5
+        numbersArray[0] = 10;
+        numbersArray[1] = 20;
+        numbersArray[2] = 30;
+        numbersArray[3] = 40;
+        numbersArray[4] = 50;
+        
+        System.out.println("Array elements:");
+        for (int num : numbersArray) {
+            System.out.println(num);
+        }
+        
+        // Using an ArrayList
+        ArrayList<Integer> numbersList = new ArrayList<>(); // Dynamic size
+        numbersList.add(10);
+        numbersList.add(20);
+        numbersList.add(30);
+        numbersList.add(40);
+        numbersList.add(50);
+        numbersList.add(60); // Unlike arrays, we can add more elements dynamically
+        
+        System.out.println("\nArrayList elements:");
+        for (int num : numbersList) {
+            System.out.println(num);
+        }
+        
+        // Removing an element from ArrayList (not possible with arrays without shifting elements manually)
+        numbersList.remove(2); // Removes the element at index 2 (30)
+        
+        System.out.println("\nArrayList after removing index 2:");
+        for (int num : numbersList) {
+            System.out.println(num);
+        }
+        
+        // Accessing elements
+        System.out.println("\nAccessing third element in array: " + numbersArray[2]); // Fixed position access
+        System.out.println("Accessing third element in ArrayList: " + numbersList.get(2));
+        
+        // Arrays have fixed size, adding more elements would require creating a new array
+        // ArrayLists automatically resize when needed
+    }
+}
